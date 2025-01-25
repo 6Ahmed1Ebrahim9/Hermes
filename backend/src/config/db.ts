@@ -1,5 +1,8 @@
 import config from './env.var.config';
 import { Pool } from 'pg';
+import { PrismaClient } from '@prisma/client';
+
+export const prisma = new PrismaClient();
 
 const pool = new Pool({
   user: config.db.user,
